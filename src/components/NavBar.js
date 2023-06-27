@@ -8,7 +8,15 @@ export default function NavBar() {
   return (
     <nav>
       <ul>
-        {links.map((link) => <li><NavLink to={link.path}>{link.name}</NavLink></li>)}
+        {
+            links.map(
+              (link) => (
+                <li key={link.path}>
+                  <NavLink to={link.path}>{link.name}</NavLink>
+                </li>
+              ),
+            )
+          }
       </ul>
     </nav>
   );
