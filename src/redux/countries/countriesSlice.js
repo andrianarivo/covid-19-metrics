@@ -1,10 +1,10 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const getCountries = createAsyncThunk('countries/getCountries', async ({ url, continent }, thunkAPI) => {
+const getCountries = createAsyncThunk('countries/getCountries', async ({ url }, thunkAPI) => {
   try {
     const resp = await axios.get(url);
-    return resp.data.filter((country) => country.continent === continent);
+    return resp.data;
   } catch (e) {
     return thunkAPI.rejectWithValue(e.message());
   }
