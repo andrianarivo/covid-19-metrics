@@ -7,7 +7,7 @@ const getContinents = createAsyncThunk('continents/getContinents', async ({ url 
     return resp.data;
   } catch (e) {
     return thunkAPI.rejectWithValue(`Oops ! An error occurred... 
-${e.message()}`);
+${e.message}`);
   }
 });
 

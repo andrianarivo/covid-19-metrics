@@ -6,7 +6,8 @@ const getCountries = createAsyncThunk('countries/getCountries', async ({ url }, 
     const resp = await axios.get(url);
     return resp.data;
   } catch (e) {
-    return thunkAPI.rejectWithValue(e.message());
+    return thunkAPI.rejectWithValue(`Oops ! An error occurred... 
+${e.message}`);
   }
 });
 
