@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing App component renders correctly 1`] = `
+Array [
+  <nav>
+    <ul>
+      <li>
+        <a
+          aria-current="page"
+          className="active"
+          href="/"
+          onClick={[Function]}
+        >
+          Home
+        </a>
+      </li>
+    </ul>
+  </nav>,
+  <div>
+    Loading...
+  </div>,
+]
+`;

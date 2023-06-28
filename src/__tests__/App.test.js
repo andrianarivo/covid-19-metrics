@@ -1,8 +1,9 @@
-import { render, screen } from '@testing-library/react';
-import App from '../App';
+import renderer from 'react-test-renderer';
+import App from '../components/App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe('Testing App component', () => {
+  test('renders correctly', () => {
+    const tree = renderer.create(<App />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });
