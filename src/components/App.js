@@ -6,7 +6,7 @@ import Details from '../routes/Details';
 import Countries from '../routes/Countries';
 import store from '../redux/store';
 
-function App() {
+export default function App() {
   return (
     <Provider store={store}>
       <BrowserRouter>
@@ -22,5 +22,3 @@ function App() {
     </Provider>
   );
 }
-
-export default App;

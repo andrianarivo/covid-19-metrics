@@ -15,6 +15,7 @@ export default function ContinentItem(props) {
       <p>{new Date(updated).toDateString()}</p>
       <button
         type="button"
+        data-testid={`button-${continent}`}
         onClick={() => {
           navigate(`details/${continent}`);
         }}

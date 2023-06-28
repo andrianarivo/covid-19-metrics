@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Testing App component renders correctly 1`] = `
+exports[`Testing Layout component renders correctly 1`] = `
 Array [
   <nav>
     <ul>
@@ -8,6 +8,7 @@ Array [
         <a
           aria-current="page"
           className="active"
+          data-testid="home-link"
           href="/"
           onClick={[Function]}
         >
@@ -16,8 +17,8 @@ Array [
       </li>
     </ul>
   </nav>,
-  <div>
-    Loading...
-  </div>,
+  <main>
+    Mock Home
+  </main>,
 ]
 `;

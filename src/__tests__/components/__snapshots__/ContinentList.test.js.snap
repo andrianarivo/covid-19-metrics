@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing ContinentList component renders correctly 1`] = `
+<ul>
+  <li>
+    <p>
+      North America
+    </p>
+    <p>
+      2389357
+       
+      active cases
+    </p>
+    <p>
+      Wed Jun 28 2023
+    </p>
+    <button
+      data-testid="button-North America"
+      onClick={[Function]}
+      type="button"
+    >
+      North America
+    </button>
+  </li>
+  <li>
+    <p>
+      Asia
+    </p>
+    <p>
+      14773130
+       
+      active cases
+    </p>
+    <p>
+      Wed Jun 28 2023
+    </p>
+    <button
+      data-testid="button-Asia"
+      onClick={[Function]}
+      type="button"
+    >
+      Asia
+    </button>
+  </li>
+</ul>
+`;

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing ContinentItem component renders correctly 1`] = `
+<li>
+  <p>
+    Dummy
+  </p>
+  <p>
+    0
+     
+    active cases
+  </p>
+  <p>
+    Thu Jan 01 1970
+  </p>
+  <button
+    data-testid="button-Dummy"
+    onClick={[Function]}
+    type="button"
+  >
+    Dummy
+  </button>
+</li>
+`;
