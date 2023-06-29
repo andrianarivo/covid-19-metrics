@@ -19,6 +19,7 @@ export default function NavBar() {
   return (
     <Nav>
       <Icon
+        data-testid="go-back"
         icon={faChevronLeft}
         onClick={navigateBack}
       />
