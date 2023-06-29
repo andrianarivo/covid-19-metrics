@@ -1,8 +1,8 @@
 import { create } from 'react-test-renderer';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import ContinentItem from '../../components/ContinentItem';
 import { withRouter } from '../../utils/testUtils';
+import FeaturedContinent from '../../components/FeaturedContinent';
 
 const mockUseNavigate = jest.fn();
 jest.mock('react-router-dom', () => ({
@@ -10,9 +10,9 @@ jest.mock('react-router-dom', () => ({
   useNavigate: () => mockUseNavigate,
 }));
 
-describe('Testing ContinentItem component', () => {
+describe('Testing FeaturedContinent component', () => {
   test('renders correctly', () => {
-    const tree = create(withRouter(<ContinentItem
+    const tree = create(withRouter(<FeaturedContinent
       continent="Dummy"
       active={0}
       updated={0}
@@ -22,7 +22,7 @@ describe('Testing ContinentItem component', () => {
 
   test('clicks the button and navigate', async () => {
     // Arrange
-    render(<ContinentItem continent="Dummy" active={0} updated={0} />);
+    render(<FeaturedContinent continent="Dummy" active={0} updated={0} interactive />);
 
     // Act
     const button = screen.getByTestId('button-Dummy');

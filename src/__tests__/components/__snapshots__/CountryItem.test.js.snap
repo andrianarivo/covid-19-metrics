@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Testing CountryItem component renders correctly 1`] = `
-<tr>
+<tr
+  className="sc-jzuGiw YszEF"
+>
   <td>
     Dummy Country
   </td>
@@ -9,11 +11,9 @@ exports[`Testing CountryItem component renders correctly 1`] = `
     <ul>
       <li>
         0
-         
-        active cases
       </li>
       <li>
-        Thu Jan 01 1970
+        53 years ago
       </li>
     </ul>
   </td>
