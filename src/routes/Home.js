@@ -29,12 +29,27 @@ export default function Home() {
     );
   }
 
+  const getFeatured = () => continentItems[0];
+
   return (
     <Container style={{
       flexDirection: 'column',
     }}
     >
-      <FeaturedContinent />
+      <FeaturedContinent
+        continent={getFeatured().continent}
+        updated={getFeatured().updated}
+        active={getFeatured().active}
+        interactive
+      />
+      <p style={{
+        padding: '0.7rem 0 0.7rem 0.7rem',
+        textTransform: 'uppercase',
+        alignSelf: 'flex-start',
+      }}
+      >
+        Choose your country:
+      </p>
       <ContinentList continents={continentItems} />
     </Container>
   );

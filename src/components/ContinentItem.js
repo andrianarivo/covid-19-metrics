@@ -35,15 +35,8 @@ export default function ContinentItem(props) {
   return (
     <Continent image={continent}>
       <p>{continent}</p>
-      <p>
-        <span>{active}</span>
-        {' '}
-        <span>active cases</span>
-      </p>
-      <p>
-        updated
-        {` ${moment(new Date(updated)).fromNow()}`}
-      </p>
+      <p>{active}</p>
+      <p>{`${moment(new Date(updated)).fromNow()}`}</p>
       <button
         type="button"
         data-testid={`button-${continent}`}
@@ -91,10 +84,6 @@ const Continent = styled.li`
 
   p {
     padding-right: 0.5rem;
-
-    span:nth-child(2) {
-      font-size: 0.7rem;
-    }
   }
 
   p:nth-child(1) {

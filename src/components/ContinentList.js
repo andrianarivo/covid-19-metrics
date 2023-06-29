@@ -25,4 +25,5 @@ ContinentList.propTypes = {
 const Continents = styled.ul`
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 `;
