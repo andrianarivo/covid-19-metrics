@@ -2,31 +2,9 @@ import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import moment from 'moment';
-import africa from '../images/africa.png';
-import europe from '../images/europe.png';
-import northAmerica from '../images/north_america.png';
-import asia from '../images/asia.png';
-import oceania from '../images/oceania.png';
-import southAmerica from '../images/south_america.png';
-
-const getImage = (continent) => {
-  switch (continent.toLowerCase()) {
-    case 'asia':
-      return asia;
-    case 'africa':
-      return africa;
-    case 'north america':
-      return northAmerica;
-    case 'south america':
-      return southAmerica;
-    case 'australia-oceania':
-      return oceania;
-    case 'europe':
-      return europe;
-    default:
-      return asia;
-  }
-};
+import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
+import Icon from '../styled/Icon';
+import getImage from '../utils/componentUtils';
 
 export default function ContinentItem(props) {
   const navigate = useNavigate();
@@ -37,11 +15,12 @@ export default function ContinentItem(props) {
       <p>{continent}</p>
       <p>{active}</p>
       <p>{`${moment(new Date(updated)).fromNow()}`}</p>
+      <Icon icon={faArrowCircleRight} />
       <button
         type="button"
         data-testid={`button-${continent}`}
         onClick={() => {
-          navigate(`details/${continent}`);
+          navigate(`details/${continent}`, { state: { continent, active, updated } });
         }}
       >
         {' '}
@@ -63,7 +42,7 @@ const Continent = styled.li`
   justify-content: flex-end;
   position: relative;
   list-style: none;
-  flex: 1 1 50%;
+  flex: 0 1 50%;
   padding: 1rem 0;
   height: 10rem;
   background-image: url(${(props) => getImage(props.image)});
@@ -94,6 +73,12 @@ const Continent = styled.li`
 
   p:nth-child(3) {
     font-size: 0.7rem;
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 
   &:nth-child(n) {

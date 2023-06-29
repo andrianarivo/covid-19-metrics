@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import moment from 'moment/moment';
 import { useNavigate } from 'react-router-dom';
-import northAmerica from '../images/north_america.png';
+import getImage from '../utils/componentUtils';
 
 export default function FeaturedContinent(props) {
   const navigate = useNavigate();
@@ -11,7 +11,7 @@ export default function FeaturedContinent(props) {
   } = props;
 
   return (
-    <Featured>
+    <Featured image={continent}>
       <div />
       <div>
         <p>{continent}</p>
@@ -29,7 +29,7 @@ export default function FeaturedContinent(props) {
           data-testid={`button-${continent}`}
           onClick={() => {
             if (interactive) {
-              navigate(`details/${continent}`);
+              navigate(`details/${continent}`, { state: { continent, active, updated } });
             }
           }}
         >
@@ -44,7 +44,11 @@ FeaturedContinent.propTypes = {
   continent: PropTypes.string.isRequired,
   active: PropTypes.number.isRequired,
   updated: PropTypes.number.isRequired,
-  interactive: PropTypes.bool.isRequired,
+  interactive: PropTypes.bool,
+};
+
+FeaturedContinent.defaultProps = {
+  interactive: false,
 };
 
 const Featured = styled.div`
@@ -69,7 +73,7 @@ const Featured = styled.div`
 
     &:nth-child(1) {
       height: 100%;
-      background-image: url(${northAmerica});
+      background-image: url(${(props) => getImage(props.image)});
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;

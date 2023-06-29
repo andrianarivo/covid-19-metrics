@@ -1,44 +1,59 @@
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { selectCountries } from '../redux/store';
 import { getCountries } from '../redux/countries/countriesSlice';
 import { GET_COUNTRIES } from '../redux/api';
 import CountryList from '../components/CountryList';
+import Container from '../styled/Container';
+import FeaturedContinent from '../components/FeaturedContinent';
 
 export default function Countries() {
+  const { state } = useLocation();
   const { slug } = useParams();
   const { loading, error, countryItems } = useSelector(selectCountries);
-  const [filteredCountries, setFilteredCountries] = useState([]);
+  const [selectedCountries, setSelectedCountries] = useState([]);
   const dispatch = useDispatch();
 
   useEffect(() => {
     if (countryItems.length === 0) {
       dispatch(getCountries({ url: GET_COUNTRIES }));
     }
-    setFilteredCountries(countryItems.filter((item) => item.continent === slug));
+    setSelectedCountries(countryItems.filter((item) => item.continent === slug));
   }, [dispatch, slug, countryItems.length, countryItems]);
 
   if (loading) {
     return (
-      <div>
+      <Container>
         Loading...
-      </div>
+      </Container>
     );
   }
 
   if (error) {
     return (
-      <div>
+      <Container>
         {error}
-      </div>
+      </Container>
     );
   }
 
   return (
-    <div>
-      <h3>{slug}</h3>
-      <CountryList countries={filteredCountries} />
-    </div>
+    <Container>
+      <FeaturedContinent
+        continent={state.continent}
+        active={state.active}
+        updated={state.updated}
+      />
+      <p style={{
+        padding: '0.7rem 0 0.7rem 0.7rem',
+        textTransform: 'uppercase',
+        alignSelf: 'flex-start',
+      }}
+      >
+        Country breakdown:
+      </p>
+      <CountryList countries={selectedCountries} />
+    </Container>
   );
 }
