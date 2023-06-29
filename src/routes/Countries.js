@@ -38,7 +38,6 @@ export default function Countries() {
   return (
     <div>
       <h3>{slug}</h3>
-      This is the element detail
       <CountryList countries={filteredCountries} />
     </div>
   );

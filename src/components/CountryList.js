@@ -5,14 +5,16 @@ export default function CountryList(props) {
   const { countries } = props;
   return (
     <table>
-      {countries.map((item) => (
-        <CountryItem
-          key={item.country}
-          country={item.country}
-          active={item.active}
-          updated={item.updated}
-        />
-      ))}
+      <tbody>
+        {countries.map((item) => (
+          <CountryItem
+            key={item.country}
+            country={item.country}
+            active={item.active}
+            updated={item.updated}
+          />
+        ))}
+      </tbody>
     </table>
   );
 }

@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import ContinentItem from './ContinentItem';
 
 export default function ContinentList(props) {
   const { continents } = props;
   return (
-    <ul>
+    <Continents>
       {continents.map((item) => (
         <ContinentItem
           key={item.continent}
@@ -13,10 +14,15 @@ export default function ContinentList(props) {
           updated={item.updated}
         />
       ))}
-    </ul>
+    </Continents>
   );
 }
 
 ContinentList.propTypes = {
   continents: PropTypes.arrayOf(Object).isRequired,
 };
+
+const Continents = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+`;
