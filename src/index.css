@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "Lato";
+  font-weight: normal;
+  src: url("fonts/Lato/Lato-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-weight: bold;
+  src: url("fonts/Lato/Lato-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Gill Sans";
+  font-weight: normal;
+  src: url("fonts/Gill-Sans/Gill-Sans.ttf");
+}
+
+@font-face {
+  font-family: "Gill Sans";
+  font-weight: bold;
+  src: url("fonts/Gill-Sans/Gill-Sans-Bold.ttf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ec4c8a;
+}
+
+* {
+  font-family: 'Gill Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}

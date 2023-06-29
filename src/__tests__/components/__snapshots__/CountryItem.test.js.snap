@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing CountryItem component renders correctly 1`] = `
+<tr
+  className="sc-jzuGiw YszEF"
+>
+  <td>
+    Dummy Country
+  </td>
+  <td>
+    <ul>
+      <li>
+        0
+      </li>
+      <li>
+        53 years ago
+      </li>
+    </ul>
+  </td>
+</tr>
+`;

@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing ContinentItem component renders correctly 1`] = `
+<li
+  className="sc-kIDzkD jHRNaF"
+  image="Dummy"
+>
+  <p>
+    Dummy
+  </p>
+  <p>
+    0
+  </p>
+  <p>
+    53 years ago
+  </p>
+  <svg
+    aria-hidden="true"
+    className="svg-inline--fa fa-circle-arrow-right sc-jzuGiw knwkHW"
+    data-icon="circle-arrow-right"
+    data-prefix="fas"
+    focusable="false"
+    role="img"
+    style={Object {}}
+    viewBox="0 0 512 512"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM281 385c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l71-71L136 280c-13.3 0-24-10.7-24-24s10.7-24 24-24l182.1 0-71-71c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L393 239c9.4 9.4 9.4 24.6 0 33.9L281 385z"
+      fill="currentColor"
+      style={Object {}}
+    />
+  </svg>
+  <button
+    data-testid="button-Dummy"
+    onClick={[Function]}
+    type="button"
+  >
+     
+  </button>
+</li>
+`;
