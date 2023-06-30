@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing FeaturedContinent component renders correctly 1`] = `
+<div
+  className="sc-jzuGiw kOlThV"
+  image="Dummy"
+>
+  <div />
+  <div>
+    <p>
+      Dummy
+    </p>
+    <p>
+      <span>
+        0
+      </span>
+       
+      <span>
+        active cases
+      </span>
+    </p>
+    <p>
+      updated
+       53 years ago
+    </p>
+    <button
+      data-testid="button-Dummy"
+      onClick={[Function]}
+      type="button"
+    >
+       
+    </button>
+  </div>
+</div>
+`;

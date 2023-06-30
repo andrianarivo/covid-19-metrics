@@ -1,13 +1,36 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "Lato";
+  font-weight: normal;
+  src: url("fonts/Lato/Lato-Regular.ttf");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "Lato";
+  font-weight: bold;
+  src: url("fonts/Lato/Lato-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Gill Sans";
+  font-weight: normal;
+  src: url("fonts/Gill-Sans/Gill-Sans.ttf");
+}
+
+@font-face {
+  font-family: "Gill Sans";
+  font-weight: bold;
+  src: url("fonts/Gill-Sans/Gill-Sans-Bold.ttf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ec4c8a;
+}
+
+* {
+  font-family: 'Gill Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #fff;
 }

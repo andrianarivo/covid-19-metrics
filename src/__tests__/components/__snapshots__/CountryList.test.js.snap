@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing CountryList component renders correctly 1`] = `
+<table
+  className="sc-kIDzkD gIEPdf"
+>
+  <tbody>
+    <tr
+      className="sc-jzuGiw YszEF"
+    >
+      <td>
+        Afghanistan
+      </td>
+      <td>
+        <ul>
+          <li>
+            12338
+          </li>
+          <li>
+            a day ago
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr
+      className="sc-jzuGiw YszEF"
+    >
+      <td>
+        Albania
+      </td>
+      <td>
+        <ul>
+          <li>
+            1696
+          </li>
+          <li>
+            a day ago
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
