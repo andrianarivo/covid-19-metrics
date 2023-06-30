@@ -17,7 +17,7 @@
 
 # 📗 Table of Contents
 
-- [📖 Covid-19 Metrics](#-about-project-)
+- [📖 Covid-19 Metrics](#about-project)
     - [🛠 Built With ](#-built-with-)
         - [Tech Stack ](#tech-stack-)
         - [Key Features ](#key-features-)
@@ -34,7 +34,6 @@
     - [🤝 Contributing ](#-contributing-)
     - [⭐️ Show your support ](#️-show-your-support-)
     - [🙏 Acknowledgments ](#-acknowledgments-)
-    - [❓ FAQ (OPTIONAL) ](#-faq-optional-)
     - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
@@ -158,7 +157,7 @@ You can deploy this project using your own deployment solution (Netlify, Render,
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Choosing theme on runtime**
+- [ ] **Choosing theme**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -185,6 +184,7 @@ If you like this project consider giving a ⭐
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I would like to thank the Microverse Community!
+Original design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
